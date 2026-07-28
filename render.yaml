@@ -6,10 +6,9 @@ services:
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
     envVars:
-      # Fill these in from YOUR question text (or edit api/guardrail.py instead).
       - key: Q3_SECRET
-        value: /home/agent/.env
+        value: /home/agent/.secrets
       - key: Q3_WRITE_ROOT
-        value: /workspace/output
+        value: /srv/reports
       - key: Q3_ALLOWED_HOSTS
-        value: api.github.com,pypi.org
+        value: registry.npmjs.org,api.github.com
